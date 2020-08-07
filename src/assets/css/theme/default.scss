@@ -1,0 +1,71 @@
+// 基础颜色
+//-------------------------------
+$white: #fff !default;
+$lighterGray: #eee !default;
+$lightGray: #ccc !default;
+$neutralGray: #aaa !default;
+$gray: #999 !default;
+$darkGray: #666 !default;
+$darkerGray: #333 !default;
+$red: #d45b5b !default;
+$customDark: #323232 !default;
+// 主题颜色
+//-------------------------------
+$themeColor: #F6F6F6 !default;
+$themeColorLighter: lighten($themeColor, 5%) !default;
+$themeGray: #f2f2f2 !default;
+$fontColor: $darkerGray !default;
+$linkColor: #42b983 !default;
+$borderColor: #d2d2d2 !default;
+$pageColor: $customDark !default;
+$shadowColor: rgba(0, 0, 0, 0) !default;
+// 字体及图片设置
+//-------------------------------
+// 设置1rem = 20px。需要与util/rem.js中的值相同
+$baseRem: 20px !default;
+// 非响应式基本字号大小
+$basicFontSize: 13px !default;
+// 响应式基本字号大小
+$baseResponseSize: 1.3rem !default;
+$basicFontFamily: "PingFangSC-Regular",
+"Helvetica",
+"Microsoft Yahei",
+san-serif !default;
+$basicFontColor: $fontColor !default;
+$basicMargin: 10px !default;
+$basicPadding: $basicMargin !default;
+// 图片主题路径
+$baseImageURL: '~sysStatic/images/default/' !default;
+// 组件设置
+//-------------------------------
+// login
+$loginBg: url($baseImageURL+"login.jpg") center center no-repeat !default;
+$loginBtn: #424f60 !default;
+$loginTextColor: $lightGray !default;
+$loginErrTextColor: $red !default;
+$loginInputErrBg: inherit !default;
+$loginInputBorderColor: rgba(255, 255, 255, .1) !default;
+$loginInputBg: $themeColor !default;
+$loginInputColor: $loginTextColor !default;
+$loginLangCurBg: #ff6363 !default;
+$loginLangCurColor: $themeColorLighter !default;
+// header
+$headerHeight: 50px !default;
+$headerBgColor:#fff !default;
+$headerBorderColor: none !default;
+$headerShadow: $shadowColor !default;
+$headerColor: #c2c2c2 !default;
+$headerFontSize: 20px !default;
+// sidenav
+$leftNavWidth: 200px !default;
+$leftCloseNavWidth: 64px !default;
+$sidenavBgColor: $themeColor !default;
+$sidenavCurrent: #20a0ff !default;
+$sidenavBorder: none !default;
+$subMenuBg:#FBFBFB !default;
+$menuActive_color:#1C5EB3;
+$menuActive_backgroundColor:rgb(233, 238, 255);
+$menuHover:rgb(197, 197, 197);
+// sysNotes
+$notesBgColor: $lighterGray !default;
+$notesBorderColor: $themeColor !default;

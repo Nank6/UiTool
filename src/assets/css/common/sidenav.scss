@@ -1,0 +1,235 @@
+.side-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $sidenavBgColor;
+    border-right: $sidenavBorder;
+    overflow: hidden;
+    border-right: solid 1px #e6e6e6;
+    transition: all 0.3s linear;
+    .logo {
+        width: $leftNavWidth;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: #fff;
+        background-color: #DFD1FF;
+        transition: all 0.3s linear;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        img {
+            width: 110px;
+            transition: all 0.3s linear;
+        }
+    }
+    .mobile-logo {
+        width: 64px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #DFD1FF;
+        transition: all 0.3s linear;
+        img {
+            width: 40px;
+            height: 40px;
+            transition: all 0.3s linear;
+        }
+    }
+    .el-menu {
+        background-color: $sidenavBgColor;
+        z-index: 10;
+        border: none;
+    }
+    .full-screen-navBg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+    &.left {
+        width: $leftNavWidth;
+        .el-menu {
+            width: $leftNavWidth;
+        }
+        .el-menu-item,
+        .el-submenu__title {
+            width: $leftNavWidth;
+        }
+        .el-submenu .el-menu-item {
+            width: $leftNavWidth;
+        }
+    }
+    &.leftClose {
+        width: $leftCloseNavWidth!important;
+        .el-menu {
+            width: $leftCloseNavWidth;
+        }
+        .el-menu-item,
+        .el-submenu__title {
+            width: $leftCloseNavWidth;
+        }
+        .el-submenu .el-menu-item {
+            width: $leftCloseNavWidth;
+        }
+    }
+    .el-menu-item {
+        &.is-active {
+            i {
+                color: $menuActive_color !important;
+            }
+            background: $menuActive_backgroundColor;
+            &::before {
+                content: '';
+                background: #1C5EB3;
+                display: inline-block;
+                width: 3px;
+                height: 100%;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+    .el-submenu .el-menu-item {
+        min-width: 0;
+        background-color: $subMenuBg;
+        &.is-active {
+            background: $menuActive_backgroundColor;
+            &::before {
+                content: '';
+                background: #1C5EB3;
+                display: inline-block;
+                width: 3px;
+                height: 100%;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+    .is-active>.el-submenu__title {
+        color: $menuActive_color;
+        i {
+            color: $menuActive_color !important;
+        }
+    }
+    //三级菜单的头设置
+    .el-submenu {
+        .el-menu {
+            .el-submenu__title {
+                background-color: $subMenuBg;
+            }
+        }
+    }
+    //统一设置鼠标样式
+    .el-menu-item,
+    .el-submenu__title {
+        &:hover {
+            background-color: $menuHover !important;
+        }
+    }
+}
+
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 140px;
+    min-height: 400px;
+}
+
+
+/**el-scrollbar组件样式设置**/
+
+.scollbar {
+    max-height: 100%;
+    z-index: 99;
+}
+
+.el-scrollbar__bar {
+    z-index: 99;
+}
+
+.scollbar.el-scrollbar__wrap {
+    overflow-x: hidden;
+}
+
+
+/**菜单默认样式设置**/
+
+.side-nav {
+    //  菜单宽高设置-Jesen
+    .el-menu-item,
+    .el-submenu__title {
+        width: $leftNavWidth;
+        height: 44px;
+        font-size: $basicFontSize;
+        line-height: 44px;
+    }
+    .el-submenu .el-menu-item {
+        width: $leftNavWidth;
+        height: 44px;
+        font-size: $basicFontSize;
+        line-height: 44px;
+    }
+    // 菜单折叠箭头-Jesen
+    .el-submenu__title i {
+        color: #303133;
+        font-size: 12px;
+        width: 12px;
+    }
+    .el-submenu__icon-arrow {
+        position: absolute;
+        left: 174px;
+        /* right: 20px; */
+        -webkit-transition: -webkit-transform .3s;
+        transition: -webkit-transform .3s;
+        transition: transform .3s;
+        transition: transform .3s, -webkit-transform .3s;
+        transition: transform .3s, -webkit-transform .3s;
+        font-size: 12px;
+    }
+    //icon图标-Jesen
+    .el-menu-item [class^=el-icon-],
+    .el-submenu [class^=el-icon-] {
+        font-size: 16px;
+        width: 24px;
+        margin-top: -2px;
+    }
+    .el-menu-item i,
+    .el-submenu__title i {
+        color: #303133;
+    }
+    .el-menu-vertical-demo:not(.el-menu--collapse) {
+        width: 200px;
+        min-height: 400px;
+    }
+}
+
+.el-menu--vertical {
+    .el-menu {
+        .el-menu-item {
+            height: 44px;
+            font-size: $basicFontSize;
+            line-height: 44px;
+            i {
+                font-size: 12px;
+                width: 12px;
+            }
+        }
+        .el-submenu {
+            .el-submenu__title {
+                height: 44px;
+                font-size: $basicFontSize;
+                line-height: 44px;
+                i {
+                    font-size: 12px;
+                    width: 12px;
+                }
+            }
+        }
+    }
+}

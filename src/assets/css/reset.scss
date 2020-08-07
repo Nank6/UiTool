@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+section,
+header,
+footer,
+aside,
+ul,
+ol,
+li,
+table,
+tr,
+th,
+td,
+button,
+input,
+textarea,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+i,
+strong,
+p,
+span,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+th,
+i,
+strong,
+input,
+textarea,
+button,
+select {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+    vertical-align: top;
+}
+
+table,
+td,
+th {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+button,
+select,
+textarea {
+    outline: none;
+    background: none;
+}
+
+textarea {
+    resize: none;
+}
+
+img,
+a img {
+    border: none;
+    vertical-align: top;
+}
+
+a,
+a:link,
+a:active,
+a:visited {
+    color: $linkColor;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:hover {
+    color: $themeColor;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-size: $basicFontSize;
+    font-family: $basicFontFamily;
+    color: $basicFontColor;
+    height: 100%;
+}
+
+.f-cb:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: ".";
+}
+
+.f-cb {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.fc {
+    margin: 0 auto;
+}
+
+.vertical-middle {
+    vertical-align: middle;
+}
+
+
+/**显示隐藏**/
+
+.hidden {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+
+/**定位**/
+
+.posR {
+    position: relative;
+}
+
+.posA {
+    position: absolute;
+}
+
+.posF {
+    position: fixed;
+}
+
+.fb {
+    font-weight: bold;
+}
+
+.textL {
+    text-align: left;
+}
+
+.textC {
+    text-align: center;
+}
+
+.textR {
+    text-align: right;
+}
+
+.text2em {
+    text-indent: 2em;
+}
+
+.word-hidden {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// autoComplete自定义中间件样式设定-Jesen
+div.el-autocomplete-suggestion.el-popper.my-autocomplete {
+    width: 400px !important;
+    li {
+        line-height: normal;
+        padding: 7px 7px 7px 12px;
+        .name {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 13px;
+        }
+        .addr {
+            font-size: 12px;
+            color: #b4b4b4;
+        }
+        .highlighted .addr {
+            color: #ddd;
+        }
+    }
+}
+
+.el-scrollbar__view.el-autocomplete-suggestion__list p {
+    float: left;
+}
+
+//导航条样式-Jesen
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+    font-weight: normal;
+    font-size: 13px!important;
+}
+
+.el-breadcrumb.app-breadcrumb {
+    .el-breadcrumb__inner a.is-active {
+        color: #1C5EB3
+    }
+}
+
+// 滚动条美化-Jesen
+::-webkit-scrollbar {
+    width: 17px;
+    height: 17px;
+}
+
+ ::-webkit-scrollbar-track,
+ ::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 5px solid transparent;
+}
+
+ ::-webkit-scrollbar-track {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .2) inset;
+}
+
+ ::-webkit-scrollbar-thumb {
+    min-height: 20px;
+    background-clip: content-box;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, .2) inset;
+}
+
+ ::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+html {
+    scrollbar-face-color: #f6f6f6;
+    scrollbar-highlight-color: #fff;
+    scrollbar-shadow-color: #eeeeee;
+    scrollbar-3dlight-color: #eeeeee;
+    scrollbar-arrow-color: #000;
+    scrollbar-track-color: #fff;
+    scrollbar-darkshadow-color: #fff;
+}
